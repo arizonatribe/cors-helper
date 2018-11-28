@@ -1,17 +1,10 @@
 {
   "name": "cors-helper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple pattern matching helper for whitelisting/blacklisting certain domains to support dynamic CORS validation in a NodeJS application",
   "main": "lib/index.js",
-  "scripts": {
-    "clean": "node_modules/.bin/rimraf dist",
-    "build": "BABEL_ENV=production babel lib --out-dir dist --ignore node_modules/ --copy-files",
-    "prepublish": "npm run build",
-    "postpublish": "npm run clean",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "engines": {
-    "node": ">=8"
+    "node": ">=7.0.0"
   },
   "repository": {
     "type": "git",
@@ -19,134 +12,30 @@
   },
   "keywords": [
     "cors",
+    "whitelist",
+    "blacklist",
+    "middleware",
+    "security",
+    "xss",
+    "cross-domain",
     "domain",
     "javascript",
     "nodejs",
-    "express"
+    "express",
+    "expressjs"
   ],
-  "author": "David Nunez <david.nunez@attainia.com>",
+  "author": "David Nunez <arizonatribe@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "ip": "1.1.5",
-    "ipaddr.js": "1.5.2",
-    "ramda": "0.24.1",
-    "ramda-adjunct": "1.14.0",
-    "range_check": "1.4.0",
-    "validator": "9.0.0"
+    "ipaddr.js": "1.8.1",
+    "range_check": "1.4.0"
   },
   "devDependencies": {
-    "babel-cli": "6.24.1",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-syntax-async-functions": "6.13.0",
-    "babel-plugin-transform-object-rest-spread": "6.23.0",
-    "babel-polyfill": "6.23.0",
-    "babel-preset-env": "1.6.1",
+    "babel-eslint": "10.0.1",
     "rimraf": "2.6.1",
-    "eslint": "4.5.0",
-    "eslint-config-airbnb-base": "11.3.2",
-    "eslint-plugin-import": "2.7.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "modules": false,
-          "loose": true
-        }
-      ]
-    ],
-    "plugins": [
-      "add-module-exports",
-      "syntax-async-functions",
-      "transform-object-rest-spread"
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "node": true
-    },
-    "extends": "airbnb-base",
-    "rules": {
-      "eol-last": "off",
-      "eqeqeq": [
-        "error",
-        "allow-null"
-      ],
-      "camelcase": "off",
-      "comma-dangle": [
-        "error",
-        "never"
-      ],
-      "indent": [
-        "error",
-        4
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "max-len": [
-        "error",
-        120,
-        {
-          "ignoreComments": true
-        }
-      ],
-      "new-cap": "error",
-      "newline-per-chained-call": "off",
-      "no-console": "error",
-      "no-eval": "error",
-      "no-trailing-spaces": [
-        "error",
-        {
-          "skipBlankLines": true
-        }
-      ],
-      "no-mixed-spaces-and-tabs": "error",
-      "no-param-reassign": [
-        "error",
-        {
-          "props": false
-        }
-      ],
-      "no-undef": "error",
-      "no-underscore-dangle": "off",
-      "no-unused-vars": [
-        "error",
-        {
-          "varsIgnorePattern": "^_$"
-        }
-      ],
-      "object-curly-spacing": "off",
-      "object-shorthand": [
-        "error",
-        "properties"
-      ],
-      "one-var": "off",
-      "quotes": [
-        "error",
-        "single"
-      ],
-      "semi-spacing": "error",
-      "semi": [
-        "error",
-        "never"
-      ],
-      "space-before-function-paren": [
-        "error",
-        {
-          "anonymous": "never",
-          "named": "never",
-          "asyncArrow": "always"
-        }
-      ],
-      "space-before-blocks": [
-        "error",
-        "always"
-      ],
-      "space-infix-ops": "error"
-    }
+    "eslint": "5.5.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14.0"
   }
 }
