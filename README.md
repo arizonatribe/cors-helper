@@ -40,6 +40,7 @@ express()
 
 This package exports two named factory functions that take a list of IPs, URLs, and/or Domains that you will be able to "whitelist" or "blacklist" when your `cors` middleware is set up.
 
+* `allowCrossDomainMiddleware` - A common piece of middleware that is used (mostly) for local development to completely turn off cors validation by setting certain headers (not typically used in production)
 * `createBlacklistMiddleware` - A function that takes an `Array` of (`String`) values that represent the IPs, URLs, and/or Domains to _reject_ (everything else will be allowed)
 * `createWhitelistMiddleware` - A function that takes an `Array` of (`String`) values that represent the IPs, URLs, and/or Domains to _allow_ (everything else will be rejected)
 
