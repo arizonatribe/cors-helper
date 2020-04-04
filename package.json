@@ -1,6 +1,6 @@
 {
   "name": "cors-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple pattern matching helper for whitelisting/blacklisting certain domains to support dynamic CORS validation in a NodeJS application",
   "main": "lib/index.js",
   "engines": {

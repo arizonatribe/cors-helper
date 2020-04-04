@@ -13,6 +13,10 @@
     "global-require": "off",
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "no-plusplus": "off",
+    "quotes": [
+      "error",
+      "double"
+    ],
     "arrow-parens": ["warn", "as-needed"],
     "import/no-named-as-default": "off",
     "no-confusing-arrow": "off",
