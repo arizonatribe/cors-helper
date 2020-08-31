@@ -21,7 +21,7 @@ const compression = require('compression')
 const { createBlockedListMiddleware } = require('cors-helper')
 
 // An array of strings representing all the sites you DON'T want to allow
-const listOfBadSites = require('./blacklist.json')
+const listOfBadSites = require('./block_these_ips_and_domains.json')
 
 const corsOptions = createBlockedListMiddleware(listOfBadSites)
 
